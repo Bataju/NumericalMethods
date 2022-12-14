@@ -3,11 +3,9 @@
 #include<math.h>
 #include<stdlib.h>
 
-
 float function(float x)
 {
-    return pow(x,2)+3*x;
-    //x*sin(x)+cos(x)+exp(x);
+    return log(x)*sin(x);
 }
 
 int main()
