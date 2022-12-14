@@ -35,17 +35,14 @@ class CurveFitting
                 sumxy += c[i].x * c[i].y;
                 sumx2 += c[i].x * c[i].x;
             }
-        }
-        void calculate()
-        {
             del = n*sumx2 - sumx * sumx;
             del1 = sumy * sumx2 - sumx *sumxy;
             del2 = n*sumxy - sumx*sumy;
-            a = del1/del;
-            b = del2/ del;
         }
         void displayResult()
         {
+            a = del1/del;
+            b = del2/ del;
             cout<<"The equation is: y = "<<a<<" + "<<b<<"x"<<endl;
         }
         ~CurveFitting()
@@ -58,7 +55,6 @@ int main()
 {
     CurveFitting c;
     c.getData();
-    c.calculate();
     c.displayResult();
     return 0;
 }
