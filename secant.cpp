@@ -12,8 +12,8 @@ class Secant
     public:
         float function(float x)
         {
-            //return (5*pow(x, 3)+6);
-            return (x*sin(x));
+            return (5*pow(x, 3)+6);
+            //return (x*sin(x));
         }
         void getInitialGuesses()
         {

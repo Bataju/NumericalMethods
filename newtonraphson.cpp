@@ -13,12 +13,20 @@ class NewtonRaphson
         float function(float x)
         {
             //return (5*pow(x, 3)+6);
-            return (x*sin(x));
+            //return(sin(x)+x*cos(x));
+            //return (pow(x, 2)+3);
+            //return (x*(1-x)); //at initial guess 0.5 maxima
+            //return (1-pow(x, 2)); //at 0 derivative 0 so error
+            return (2+exp(x));
         }
         float derivative(float x)
         {
             //return (15*pow(x, 2));
-            return(x*cos(x)+sin(x));
+            //return(x*cos(x)+sin(x));
+            //return(2*x);
+            //return(1-2*x);
+            //return(-2*x);
+            return (exp(x));
         }
         void getInitialGuess()
         {
