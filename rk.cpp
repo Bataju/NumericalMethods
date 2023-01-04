@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 class RK
@@ -19,7 +20,7 @@ class RK
         }
         float slope(float x, float y)
         {
-            return x*x+y*y;
+            return 3*x*x*y;
         }
         void solveRk1()
         {
