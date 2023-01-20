@@ -14,7 +14,7 @@ class Gauss
         {
             cout<<"Enter the number of unknowns: ";
             cin>>n;
-            array = new float*[n];
+            array = new float* [n];
             for(int i=0; i<n;i++)
             {
                 array[i] = new float[n+1];
@@ -66,6 +66,11 @@ class Gauss
             //uppertriangular
             for(int j = 0; j<n; j++)
             {
+                if(fabs(array[j][j])<=0.00005)
+                {
+                    cout<<"Error"<<endl;
+                    exit(0);
+                }
                 for(int i=j+1; i<n; i++)
                 {
                     float temp = array[i][j]/array[j][j];
