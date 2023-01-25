@@ -48,7 +48,7 @@ class CurveFitting
             initializeMatrix();
             float x, y;
             cout<<"Enter x and y"<<endl;
-            for(int i=0; i<n; i++)
+            for(int k=0; k<n; k++)
             {
                 cout<<"x and y: ";
                 cin>>x>>y;
