@@ -23,13 +23,13 @@ class RK4
         }
         float funcg(float x, float y, float z)//dz/dx = x*z+y
         {
-            //return (6*x+z*z)/-10;
-            return 1+2*x*y-x*x*z;
+            return (6*x+z*z)/-10; //0 1 0 0.25 0.5
+            //return 1+2*x*y-x*x*z; //0 1 0 0.1 1
         }
         void solveAndDisplay()
         {
             float k1, k2, k3, k4, l1, l2, l3, l4, k, l;
-            for(x0; x0<=xn; x0 = x0+h)
+            for(x0; x0<xn+h; x0 = x0+h)
             {
                 cout<<x0<<"\t"<<y0<<"\t"<<z0<<endl;
                 k1 = h*funcf(x0, y0, z0);
